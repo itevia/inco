@@ -20,7 +20,7 @@ func main() {
 				},
 			},
 			{
-				Name:  "upload",
+				Name:  "update-resources",
 				Usage: "use config to send scripts to upload iflow scripts",
 				Action: func(context.Context, *cli.Command) error {
 					return runUploads()
