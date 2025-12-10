@@ -1,10 +1,19 @@
 # Welcome to inco
 
-inco tests scripts and provides the resources to the associated SAP integration flow.
-To be used in CICD pipelines to easily test and upload every script used in you SAP iflow.
+inco tests scripts and provides the resources to the associated SAP integration flow.<br/>
+To be used in CICD pipelines to easily test and upload every script used in you SAP iflow.<br/>
 inco will search a manifest file inco.yaml where it is invoked.
 
 # Getting started
+
+## Install Dependencies
+
+Install groovy<br/>
+```sudo apt-get install groovy```<br/>
+Then verify installation<br/>
+```groovy --version```
+
+
 
 ## Install inco
 
