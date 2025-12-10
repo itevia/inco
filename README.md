@@ -1,8 +1,8 @@
 # Welcome to inco
 
-inco tests scripts and provides the resources to the associated SAP integration flow.<br/>
+**inco** tests scripts and provides the resources to the associated SAP integration flow.<br/>
 To be used in CICD pipelines to easily test and upload every script used in you SAP iflow.<br/>
-inco will search a manifest file inco.yaml where it is invoked.
+**inco** will search a manifest file inco.yaml where it is invoked.
 
 # Getting started
 
@@ -21,18 +21,27 @@ Then verify installation<br/>
 
 or
 
-```sudo curl -L https://github.com/itevia/inco/releases/download/0.0.1/inco-linux-amd64 -o /usr/local/bin/inco && sudo chmod +x /usr/local/bin/inco```
+```sudo curl -L https://github.com/itevia/inco/releases/download/0.0.2/inco-linux-amd64 -o /usr/local/bin/inco && sudo chmod +x /usr/local/bin/inco```
 
-Welcome to the clipper wiki!
 
 ## Required Configuration
+
+### Where to find information
+
+Client ID, Client Secret, Token URL, URL can be found in **SAP BTP Cockpit -> Instances and Subscriptions -> Instances**.<br/>
+Display or create the Key related to the **Service SAP Process Integration Runtime**, plan **api**.
+![where key](./img/keywhere.png)
+
+Clicking on key(s), the information will be displayed:<br/>
+![what key](./img/keywhat.png)
+
 
 ### Environment variables
 
 | Field Name | Additional info    |
 |------------|--------------------|
-| CPI_USER       |  
-| CPI_PASSWORD   | 
+| CPI_CLIENT_ID       |  
+| CPI_CLIENT_SECRET   | 
 
 
 ### Project configuration file - Manifest
@@ -43,8 +52,8 @@ Create a inco.yaml file at root of your project
 
 | Field Name | Type | Additional info    |
 |------------|------|--------------------|
-| tenantURL       |string| Required 
-| apiURL      |string| Required
+| tokenURL       |string| Required 
+| url      |string| Required
 | testPaths       |[string]| Required - list of paths to find test scripts to run
 | uploadScripts      |[Iflow]| Required - list of UploadScript
 
@@ -71,8 +80,8 @@ Below you can see a manifest **inco** will use as input.<br>
 The manifest must be at project root.
 
 ```
-tenantURL: https://<tenant>.authentication.eu10.hana.ondemand.com
-apiURL: https://<tenant>.hana.ondemand.com
+tokenURL: https://<tenant>.authentication.eu10.hana.ondemand.com
+url: https://<tenant>.hana.ondemand.com
 testPaths:
   - tools/runTests.groovy
 uploadScripts:
