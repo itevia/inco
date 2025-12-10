@@ -21,7 +21,7 @@ Then verify installation<br/>
 
 or
 
-```sudo curl -L https://github.com/itevia/inco/releases/download/0.0.2/inco-linux-amd64 -o /usr/local/bin/inco && sudo chmod +x /usr/local/bin/inco```
+```sudo curl -L https://github.com/itevia/inco/releases/download/v0.0.2/inco-linux-amd64 -o /usr/local/bin/inco && sudo chmod +x /usr/local/bin/inco```
 
 
 ## Required Configuration
