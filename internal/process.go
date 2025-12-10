@@ -31,10 +31,10 @@ func ExecuteTests(paths []string, stdout, stderr io.Writer) bool {
 // UploadScripts authenticates over oauth2, then upload iflow scripts.
 func UploadScripts(client IBTPClient, readFile func(string) ([]byte, error), iflows []Iflow) error {
 	if err := client.RequestToken(); err != nil {
-		return fmt.Errorf("RequestToken: %v", err)
+		return fmt.Errorf("RequestToken: %w", err)
 	}
 	if err := client.FetchCSRFToken(); err != nil {
-		return fmt.Errorf("FetchCSRFToken: %v", err)
+		return fmt.Errorf("FetchCSRFToken: %w", err)
 	}
 
 	var uploadErr error
