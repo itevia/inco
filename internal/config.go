@@ -5,10 +5,10 @@ import (
 )
 
 type Config struct {
-	IntegrationSuiteTenantURL string   `yaml:"tenantURL"`
-	IntegrationSuiteAPIURL    string   `yaml:"apiURL"`
-	TestPaths                 []string `yaml:"testPaths"`
-	UploadScripts             []Iflow  `yaml:"uploadScripts"`
+	IntegrationSuiteTokenURL string   `yaml:"tokenURL"`
+	IntegrationSuiteAPIURL   string   `yaml:"url"`
+	TestPaths                []string `yaml:"testPaths"`
+	UploadScripts            []Iflow  `yaml:"uploadScripts"`
 }
 
 type Iflow struct {
