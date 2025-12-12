@@ -21,7 +21,7 @@ Then verify installation<br/>
 
 or
 
-```sudo curl -L https://github.com/itevia/inco/releases/download/v0.0.2/inco-linux-amd64 -o /usr/local/bin/inco && sudo chmod +x /usr/local/bin/inco```
+```sudo curl -L https://github.com/itevia/inco/releases/download/v0.0.3/inco-linux-amd64 -o /usr/local/bin/inco && sudo chmod +x /usr/local/bin/inco```
 
 
 ## Required Configuration
@@ -40,8 +40,10 @@ Clicking on key(s), the information will be displayed:<br/>
 
 | Field Name | Additional info    |
 |------------|--------------------|
-| CPI_CLIENT_ID       |  
-| CPI_CLIENT_SECRET   | 
+| CPI_CLIENT_ID       |  |
+| CPI_CLIENT_SECRET   |  |
+|CPI_TOKEN_URL| safer - loaded if not in the yaml config (tokenURL) |
+|CPI_URL| safer - loaded if not in the yaml config (url) |
 
 
 ### Project configuration file - Manifest
