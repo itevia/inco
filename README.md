@@ -43,7 +43,7 @@ Clicking on key(s), the information will be displayed:<br/>
 | CPI_CLIENT_ID       |  |
 | CPI_CLIENT_SECRET   |  |
 |CPI_TOKEN_URL| safer - loaded if not in the yaml config (tokenURL) |
-|CPI_URL| safer - loaded if not in the yaml config (url) |
+|CPI_API_URL| safer - loaded if not in the yaml config (url) |
 
 
 ### Project configuration file - Manifest
